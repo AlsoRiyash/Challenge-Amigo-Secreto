@@ -1,0 +1,218 @@
+:root {
+    --color-primary: #A6C1EE;
+    --color-secondary: #DCE2F0;
+    --color-tertiary: #B0BEC5;
+    --color-button: #4A90A2;
+    --color-button-hover: #417D8A;
+    --color-reset: #78909C;
+    --color-reset-hover: #607D8B;
+    --color-text: #2C3E50;
+    --color-white: #FFFFFF;
+}
+
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+.header-banner img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Seção de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 2px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Campo de entrada */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 18px;
+    outline: none;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border: 2px solid #000;
+    border-radius: 0 25px 25px 0;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+}
+
+/* Lista de amigos */
+.name-list {
+    list-style: none;
+    font-size: 20px;
+    color: var(--color-text);
+    margin: 20px 0;
+    padding: 0;
+}
+
+.name-list li {
+    background: var(--color-white);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Resultado */
+.result-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #05DF05;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Container dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Botão de sortear */
+.button-draw,
+.button-reset {
+    display: flex;
+    align-items: center;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-draw {
+    background-color: var(--color-button);
+    color: var(--color-white);
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+.button-reset {
+    background-color: var(--color-reset);
+    color: #000;
+}
+
+.button-reset:hover {
+    background-color: var(--color-reset-hover);
+}
+
+.button-draw img,
+.button-reset img {
+    margin-right: 10px;
+}
+
+/* Efeito de clique */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .input-name {
+        font-size: 16px;
+    }
+
+    .button-add,
+    .button-draw,
+    .button-reset {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .button-draw img,
+    .button-reset img {
+        width: 20px;
+    }
+}
